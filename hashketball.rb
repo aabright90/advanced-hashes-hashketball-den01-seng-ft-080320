@@ -163,7 +163,6 @@ def team_names
   names = []
   game_hash.each do |location, team_data|
     names << team_data[:team_name]
-    # binding.pry
   end
   names
 end
@@ -173,10 +172,10 @@ def player_numbers(team_name)
   game_hash.each do |location, team_data|
     if team_name == team_data[:team_name]
       team_data[:players].each do |player|
-        # binding.pry
         numbers << player[:number]
       end
     end
   end
   numbers
 end
+
