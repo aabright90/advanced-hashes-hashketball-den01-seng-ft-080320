@@ -185,6 +185,6 @@ def player_numbers(team_name)
     if team_name == team_data[:team_name]
       team_data[:players].each do |player|
         binding.pry
-    end 
+    end
   end
 end
