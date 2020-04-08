@@ -163,13 +163,7 @@ def shoe_size(player)
   end
 
   def team_colors(team_name)
-    i = 0
-    while i < game_hash.length do
-      if team_name == :home[:team_name]
-        return :home[:colors]
-      elsif  team_name == :away[:team_name]
-        return :away[:colors]
-      end
-      i += 1
-    end
+    game_hash.each do |location, team_data|
+      binding.pry
+    end 
   end
