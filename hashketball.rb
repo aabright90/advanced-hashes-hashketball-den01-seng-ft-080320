@@ -208,7 +208,8 @@ def big_shoe_rebounds
       if player[:shoe] > shoe_size
         shoe_size = player[:shoe]
         correlating_rebounds = player[:rebounds]
-      binding.pry
+      # binding.pry
+      end 
     end
   end
   correlating_rebounds
