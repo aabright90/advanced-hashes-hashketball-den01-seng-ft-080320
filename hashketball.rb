@@ -209,7 +209,7 @@ def big_shoe_rebounds
         shoe_size = player[:shoe]
         correlating_rebounds = player[:rebounds]
       # binding.pry
-      end 
+      end
     end
   end
   correlating_rebounds
