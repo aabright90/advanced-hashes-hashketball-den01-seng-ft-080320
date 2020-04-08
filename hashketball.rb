@@ -184,7 +184,7 @@ def player_stats(name)
     team_data[:players].each do |player|
       if name == player[:player_name]
         return player
-      end 
+      end
     end
   end
 end
