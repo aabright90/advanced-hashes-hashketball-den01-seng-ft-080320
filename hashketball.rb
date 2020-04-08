@@ -182,11 +182,7 @@ end
 def player_numbers(team_name)
   game_hash.each do |location, team_data|
     team_data.each do |team_data_set, value|
-       if team_data_set == :players
-         value.each do |team_member|
            binding.pry
-         end
-       end
     end
   end
 end
