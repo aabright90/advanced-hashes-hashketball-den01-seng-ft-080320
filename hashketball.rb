@@ -1,10 +1,10 @@
 # Write your code here!
 require 'pry'
 def game_hash
-  hash = {
+ {
   :home => {
     :team_name => "Brooklyn Nets",
-    :colors => "Black, White",
+    :colors => ["Black, White"],
     :players => [{
       :player_name => "Alan Anderson",
       :number => 0,
@@ -74,7 +74,7 @@ def game_hash
     },
   :away => {
     :team_name => "Charlotte Hornets",
-    :colors => "Turquoise, Purple",
+    :colors => ["Turquoise, Purple"],
     :players => [{
       :player_name => "Jeff Adrien",
       :number => 4,
@@ -132,23 +132,44 @@ def game_hash
       }]
   }
 }
-hash
 end
 
 def num_points_scored(player)
-  # find_score_home = game_hash[:home][:players]
-  # find_score_away = game_hash[:away][:players]
-  # i = 0
-  # while i < game_hash.length
-  #   if player == find_score_home[i][:player_name]
-  #     find_score_home[i][:points]
-  #   elsif player == find_score_away[i][:player_name]
-  #     find_score_away[i][:points]
-  #   end
-  #   i += 1
-  # end
-  home_team = game_hash[:home][:players]
-  away_team = game_hash[:away][:players]
-
-  binding.pry
+  game_hash.each do |location, team_data|
+    team_data.each do |team_data_set, value|
+     if team_data_set == :players
+       value.each do |team_member|
+         if player == team_member[:player_name]
+           return team_member[:points]
+         end
+       end
+     end
+    end
+  end
 end
+
+def shoe_size(player)
+  game_hash.each do |location, team_data|
+    team_data.each do |team_data_set, value|
+     if team_data_set == :players
+       value.each do |team_member|
+         if player == team_member[:player_name]
+           return team_member[:shoe]
+         end
+       end
+     end
+    end
+  end
+  end
+
+  def team_colors(team_name)
+    i = 0
+    while i < game_hash.length do
+      if team_name == :home[:team_name]
+        return :home[:colors]
+      elsif  team_name == :away[:team_name]
+        return :away[:colors]
+      end
+      i += 1
+    end
+  end
