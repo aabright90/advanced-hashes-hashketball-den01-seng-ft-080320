@@ -167,6 +167,6 @@ def shoe_size(player)
       if team_name == team_data[:team_name]
         return team_data[:colors]
       # binding.pry
-      end 
+      end
     end
   end
