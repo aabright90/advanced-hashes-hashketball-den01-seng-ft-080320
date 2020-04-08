@@ -182,7 +182,7 @@ end
 def player_stats(name)
   game_hash.each do |location, team_data|
     team_data.each do |team_data_set, value|
-      team_data_set[:players]
+      team_data_set[:players].each do |player|
       binding.pry
     end
   end
