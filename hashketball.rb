@@ -4,7 +4,7 @@ def game_hash
  {
   :home => {
     :team_name => "Brooklyn Nets",
-    :colors => "Black, White",
+    :colors => ["Black, White"],
     :players => [{
       :player_name => "Alan Anderson",
       :number => 0,
@@ -74,7 +74,7 @@ def game_hash
     },
   :away => {
     :team_name => "Charlotte Hornets",
-    :colors => "Turquoise, Purple",
+    :colors => ["Turquoise, Purple"],
     :players => [{
       :player_name => "Jeff Adrien",
       :number => 4,
@@ -167,6 +167,6 @@ def shoe_size(player)
       if team_name == team_data[:team_name]
         return team_data[:colors]
       # binding.pry
-      end
+      end 
     end
   end
