@@ -186,7 +186,7 @@ def player_numbers(team_name)
       if team_name == team_data_set[:team_name]
         :player.each do |player_info|
           #  binding.pry
-        end 
+        end
       end
     end
   end
