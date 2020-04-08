@@ -186,9 +186,13 @@ def player_stats(name)
       if name == player[:player_name]
        stats = {
          :assists => player[:assists],
-         :blocks => player[:blocks]
-         :number => player[:number]
-         :points => player[:points]
+         :blocks => player[:blocks],
+         :number => player[:number],
+         :points => player[:points],
+         :rebounds => player[:rebounds],
+         :shoe => player[:shoe],
+         :slam_dunks => player[:slam_dunks],
+         :steals => player[:steals]
        }
       end
     end
