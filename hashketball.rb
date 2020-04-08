@@ -176,4 +176,5 @@ def team_names
     names << team_data[:team_name]
     # binding.pry
   end
+  names
 end
